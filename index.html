@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cafe du Passage</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+
+	<div class="bgimg">
+		<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+			<div class="container">
+				<a href="" class="navbar-brand text-warning font-weight-bold">PASSAGE</a>
+
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsenavbar">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse text-center" id="collapsenavbar">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item">
+							<a href="#" class="nav-link text-white">Home</a>
+						</li>
+						<li class="nav-item">
+							<a href="#about" class="nav-link text-white">About</a>
+						</li>
+						<li class="nav-item">
+							<a href="#gallery" class="nav-link text-white">Gallery</a>
+						</li>						
+						<li class="nav-item">
+							<a href="#menu" class="nav-link text-white">Menu</a>
+						</li>
+						<li class="nav-item">
+							<a href="#contact" class="nav-link text-white">Contact</a>
+						</li>			
+					</ul>		
+				</div>
+			</div>		
+		</nav>
+
+		<div class="container text-center text-black hearderset">
+			<h1>Cafe du Passage</h1>
+			<h2>A pleasant environment for all those who appreciate details, warmth and delightful daily routine!</h2>
+		</div>	
+	</div>
+
+	<!--about------------------------------------------->
+
+	<section class="container about text-center text-black bg-light" id="about">
+		<h1>About</h1>
+		<p>On May 30th 2020, we opened our doors!<br>
+		Our coffee bar is located on Abi Carshia in Prizren!<br>
+		We would like to take the time to say thank you to all the wonderful people that makes our coffee bar such a great place for us!<br>
+		So to all our suppliers, guests, friends, family and colleagues in our profession - a big heartfelt thank you for your support!
+		</p>
+        <img src="images_place.jpg" class="img-fluid" alt="Responsive image">
+	</section>
+
+
+    <!--gallery-------------------------------------------->
+
+	<section class="gallery  text-center bg-dark text-white" id="gallery">
+		<div class="container text-center">
+			<h1>Gallery</h1>
+			<p>Here are a lot of photos of our coffee bar....</p>
+		</div>
+
+<div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src="images/cocktail.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="img_5terre_wide.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="img_mountains_wide.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src="img_lights_wide.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+    <img src="img_nature_wide.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+    <img src="img_snow_wide.jpg" style="width:100%">
+  </div>
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="img_woods.jpg" style="width:100%" onclick="currentSlide(1)" alt="Cafe du Passage Enviroment">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img_5terre.jpg" style="width:100%" onclick="currentSlide(2)" alt="Cafe du Passage Enviroment">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img_mountains.jpg" style="width:100%" onclick="currentSlide(3)" alt="Cafe du Passage Enviroment">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img_lights.jpg" style="width:100%" onclick="currentSlide(4)" alt="Cafe du Passage Enviroment">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img_nature.jpg" style="width:100%" onclick="currentSlide(5)" alt="Cafe du Passage Enviroment">
+    </div>    
+    <div class="column">
+      <img class="demo cursor" src="img_snow.jpg" style="width:100%" onclick="currentSlide(6)" alt="Cafe du Passage Enviroment">
+    </div>
+  </div>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+
+		<div class="container text-center">
+			<h3>Parties</h3>
+			<p>Walk into Passage, find your friends and order a round of neat spirits. That's how we get the night started.<br>Do not miss!</p>
+		</div>
+
+			<div class="col-lg-4 col-md-4 col-sm-12 col-10 d-block m-auto">
+				<div class="card">
+					<img src="images/cocktail.jpg" class="card-img img-fluid">
+				</div>
+			</div>
+			
+			<div class="col-lg-4 col-md-4 col-sm-12 col-10 d-block m-auto">
+				<div class="card">
+					<img src="images/cocktail.jpg" class="card-img img-fluid">
+				</div>
+			</div>
+			
+			<div class="col-lg-4 col-md-4 col-sm-12 col-10 d-block m-auto">
+				<div class="card">
+					<img src="images/cocktail.jpg" class="card-img img-fluid">
+				</div>
+			</div>
+
+			<div class="col-lg-4 col-md-4 col-sm-12 col-10 d-block m-auto">
+				<div class="card">
+					<img src="images/cocktail.jpg" class="card-img img-fluid">
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!--menu-------------------------------------------->
+
+	<section class="menu text-black text-center bg-light" id="menu">
+		<div class="container text-center">
+			<h1>Menu</h1>
+			<p>We serve coffee, hot chocolate, tea, coctails, alcoholic drinks...</p>
+		</div>
+
+		<div class="row">
+
+			<div class="col-lg-4 col-md-4 col-sm-12 col-10 d-block m-auto">
+				<div class="card">
+					<img src="images/cocktail.jpg" class="card-img img-fluid">
+					<div class="card-body">
+						<h2 class="card-title">Cocktail</h2>
+						<p class="card-text">It is a mix of strawberry,alcohol....</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-4 col-md-4 col-sm-12 col-10 d-block m-auto">
+				<div class="card">
+					<img src="images/cocktail.jpg" class="card-img img-fluid">
+					<div class="card-body">
+						<h2 class="card-title">Cocktail</h2>
+						<p class="card-text">It is a mix of strawberry,alcohol....</p>
+					</div>
+				</div>
+			</div>	
+			<div class="col-lg-4 col-md-4 col-sm-12 col-10 d-block m-auto">
+				<div class="card">
+					<img src="images/cocktail.jpg" class="card-img img-fluid">
+					<div class="card-body">
+						<h2 class="card-title">Cocktail</h2>
+						<p class="card-text">It is a mix of strawberry,alcohol....</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-4 col-md-4 col-sm-12 col-10 d-block m-auto">
+				<div class="card">
+					<img src="images/cocktail.jpg" class="card-img img-fluid">
+					<div class="card-body">
+						<h2 class="card-title">Cocktail</h2>
+						<p class="card-text">It is a mix of strawberry,alcohol....</p>
+					</div>
+				</div>
+			</div>	
+			<div class="col-lg-4 col-md-4 col-sm-12 col-10 d-block m-auto">
+				<div class="card">
+					<img src="images/cocktail.jpg" class="card-img img-fluid">
+					<div class="card-body">
+						<h2 class="card-title">Cocktail</h2>
+						<p class="card-text">It is a mix of strawberry,alcohol....</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-4 col-md-4 col-sm-12 col-10 d-block m-auto">
+				<div class="card">
+					<img src="images/cocktail.jpg" class="card-img img-fluid">
+					<div class="card-body">
+						<h2 class="card-title">Cocktail</h2>
+						<p class="card-text">It is a mix of strawberry,alcohol....</p>
+					</div>
+				</div>
+			</div>	
+			<div class="col-lg-4 col-md-4 col-sm-12 col-10 d-block m-auto">
+				<div class="card">
+					<img src="images/cocktail.jpg" class="card-img img-fluid">
+					<div class="card-body">
+						<h2 class="card-title">Cocktail</h2>
+						<p class="card-text">It is a mix of strawberry,alcohol....</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-4 col-md-4 col-sm-12 col-10 d-block m-auto">
+				<div class="card">
+					<img src="images/cocktail.jpg" class="card-img img-fluid">
+					<div class="card-body">
+						<h2 class="card-title">Cocktail</h2>
+						<p class="card-text">It is a mix of strawberry,alcohol....</p>
+					</div>
+				</div>
+			</div>	
+
+			<div class="col-lg-4 col-md-4 col-sm-12 col-10 d-block m-auto">
+				<div class="card">
+					<img src="images/cocktail.jpg" class="card-img img-fluid">
+					<div class="card-body">
+						<h2 class="card-title">Cocktail</h2>
+						<p class="card-text">It is a mix of strawberry,alcohol....</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+	</section>
+
+ <!--Contact------------------------------------------>
+        <section class=" contact contact-us bg-dark" id="contact">
+        <h1 class="text-white text-center">Contact Us</h1>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7">
+                        <div class="section-title">
+                            <p class="text-white">Location: Rr.Tirana-Abi Carshia, Prizren 200000<br>Number: +39349111222</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-7">
+                        <form action="/" class="mb-4 mb-lg-0">
+                            <div class="form-row">
+                                <div class="col-md-6 form-group">
+                                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" />
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" />
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" name="message" placeholder="Type Message"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-light">Contact Now</button>
+                        </form>
+                    </div>
+
+                    <div class="col-lg-5">
+                        <div class="map">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3571289.733943155!2d76.08560099999998!3d29.058775699999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390e4a4b98404f57%3A0x75ffae70833e8448!2sShahbad%2C%20Haryana%20136135!5e0!3m2!1sen!2sin!4v1594195370933!5m2!1sen!2sin" width="100%" height="350" frameborder="0" style="border: 0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+     <footer class="text-white bg-dark text-center">Created By Elita Rexha | <span class="far fa-copyright"> 2/2/2021 All rights reserved.</footer>
+</body>
+</html>
