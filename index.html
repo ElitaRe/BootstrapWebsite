@@ -21,7 +21,7 @@
 <body>
 
 	<div class="bgimg">
-		<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+		<nav class="navbar navbar-expand-md bg-dark navbar-dark" id="navbar_top">
 			<div class="container">
 				<a href="" class="navbar-brand text-warning font-weight-bold">PASSAGE</a>
 
@@ -59,6 +59,20 @@
 			<h2>A pleasant environment for all those who appreciate details, warmth and delightful daily routine!</h2>
 		</div>	
 	</div>
+
+	<script>
+		if ($(window).width() > 992) {
+  $(window).scroll(function(){  
+     if ($(this).scrollTop() > 40) {
+        $('#navbar_top').addClass("fixed-top");
+        $('body').css('padding-top', $('.navbar').outerHeight() + 'px');
+      }else{
+        $('#navbar_top').removeClass("fixed-top");
+        $('body').css('padding-top', '0');
+        }   
+     });
+  }
+	</script>
 
 	<!--about------------------------------------------->
 
