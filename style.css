@@ -1,3 +1,7 @@
+html{
+	scroll-behavior: smooth;
+}
+
 .bgimg{
 	background-image: url('images/bgimage2.jpg');
 	background-size: 100% 100%;
@@ -75,19 +79,21 @@ img {
 
 .mySlides {
   display: none;
-  width: 60%;
+  width: 100%;
   height: auto;
 }
 
+.mySlides img {
+	width:100%;
+}
 .cursor {
   cursor: pointer;
 }
 
-.prev,
-.next {
+.icons {
   cursor: pointer;
   position: absolute;
-  top: 50%;
+  top: 40%;
   width: auto;
   padding: 16px;
   left: 6%;
@@ -97,11 +103,13 @@ img {
   border-radius: 0 3px 3px 0;
   user-select: none;
   -webkit-user-select: none;
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
 }
 
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
+.next, .prev {
+	color:white;
 }
 
 .numbertext {
@@ -117,9 +125,12 @@ img {
   background-color: #222;
   padding: 2px 16px;
   color: white;
-  width: 60%;
+  width: 100%;
 }
 
+#caption {
+	margin-top: 1rem;
+}
 .row:after {
   content: "";
   display: table;
