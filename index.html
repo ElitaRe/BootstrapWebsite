@@ -60,20 +60,6 @@
 		</div>	
 	</div>
 
-	<script>
-		if ($(window).width() > 992) {
-  $(window).scroll(function(){  
-     if ($(this).scrollTop() > 5) {
-        $('#navbar_top').addClass("fixed-top");
-        $('body').css('padding-top', $('.navbar').outerHeight() + 'px');
-      }else{
-        $('#navbar_top').removeClass("fixed-top");
-        $('body').css('padding-top', '0');
-        }   
-     });
-  }
-	</script>
-
 	<!--about------------------------------------------->
 
 	<section class=" about text-center text-white bg-dark" id="about">
@@ -97,7 +83,7 @@
 			Here are some photos of our coffee bar....</p>
 		</div>
 
-<div class="container">
+<div class="container slides">
   <div class="mySlides">
     <div class="numbertext">1 / 6</div>
     <img src="images/gallery1.jpg">
@@ -195,8 +181,8 @@ function showSlides(n) {
 
 	<!--menu-------------------------------------------->
 
-	<section class="menu text-white text-center bg-dark" id="menu">
-		<div class="container text-center">
+	<section class="menu text-white text-center bg-dark" id="menu" style="width: 100%;">
+		<div class="container text-center" style="width: 50%;">
 			<h1>Menu</h1>
 			<p>We serve different kinds of drinks, just depends on your taste!</p>
 		</div>
@@ -369,5 +355,18 @@ function showSlides(n) {
      	<a href="https://www.instagram.com/cafedupassage.pz/" target="_blank"> <img src="images/ig.png" width="65px"></a> 
      	<a href="https://www.facebook.com/CafeDuPassage.pz" target="_blank"> <img src="images/fb.png" width="61px"></a>
      	<br> Created By Elita Rexha | <span class="far fa-copyright"> 2/2/2021 All rights reserved.</footer>
-</body>
+			<script>
+				if ($(window).width() > 992) {
+		  $(window).scroll(function(){  
+			 if ($(this).scrollTop() > 5) {
+				$('#navbar_top').addClass("fixed-top");
+				$('body').css('padding-top', $('.navbar').outerHeight() + 'px');
+			  }else{
+				$('#navbar_top').removeClass("fixed-top");
+				$('body').css('padding-top', '0');
+				}   
+			 });
+		  }
+			</script>
+		</body>
 </html>
