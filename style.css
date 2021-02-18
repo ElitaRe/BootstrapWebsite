@@ -32,6 +32,11 @@ html{
 	height: auto;
 }
 
+video {
+  width: 67%;
+  height: auto;
+}
+
 .menu{
 	width: 100%;
 	padding: 100px 0px 50px;
