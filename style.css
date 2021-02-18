@@ -50,6 +50,10 @@ video {
     color: white;
  }
 
+ .photoparty {
+   margin: 5px;
+ }
+
 .card{
 	margin: 60px;
 	color: #444444;
